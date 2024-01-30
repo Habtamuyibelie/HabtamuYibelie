@@ -1,0 +1,41 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>contact system</title>
+
+  <link rel="stylesheet" href="{% static '/css/contact_style.css'%}">
+  <style>
+    body{
+      animation:change 35s infinite ease-in-out;
+    }
+    
+    @keyframes change{
+      0%{
+        background-image:url('{%static '/img/img1.jpg'%}')
+         }
+      20%{
+     background-image:url('{%static '/img/img2.jpg'%}')
+      }
+      
+      40%{
+        background-image:url('{%static '/img/img3.jpg'%}')
+          }
+        60%{
+            background-image:url('{%static '/img/img4.jpg'%}')
+              }
+        80%{
+            background-image:url('{%static '/img/img6.jpg'%}')
+            }
+                  
+       100%{
+        background-image:url('{%static '/img/intern.jpg'%}')
+          }
+    }
+    </style>
+</head>
+<body>
+ ANSWER....{{res}}
+</body>
+</html>

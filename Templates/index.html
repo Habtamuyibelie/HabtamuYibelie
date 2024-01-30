@@ -1,0 +1,92 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static '/css/style.css'%}">
+<style>
+body{
+  animation:change 35s infinite ease-in-out;
+}
+
+@keyframes change{
+  0%{
+    background-image:url('{%static '/img/img1.jpg'%}')
+     }
+  20%{
+ background-image:url('{%static '/img/img2.jpg'%}')
+  }
+  
+   40%{
+    background-image:url('{%static '/img/img3.jpg'%}')
+      }
+    60%{
+        background-image:url('{%static '/img/img4.jpg'%}')
+          }
+    80%{
+        background-image:url('{%static '/img/img6.jpg'%}')
+        }
+              
+   100%{
+    background-image:url('{%static '/img/intern.jpg'%}')
+      }
+}
+</style>
+</head>
+<body>
+  <div class="logo">
+    <h1>HABTAMU YIBELIE</h1><br>
+    <h3>WELLCOME TO MY PORTFOLIO </h3>
+    <h3><img src="{%static '/img/intern.jpg'%}'" alt=""></h3>
+    
+  </div>
+<div class="navbar" id="mynavbar">
+
+  <a href="#home">HOME</a>
+  <div class="dropdown">
+    <button class="dropbtn">TUTORIAL
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-list">
+      <a href="{% url 'comingsoon'%}">S.W Dev.t</a>
+      <a href="{% url 'comingsoon'%}">NETWORKING</a>
+      <a href="{% url 'comingsoon'%}">DATABASE</a>
+      <a href="{% url 'comingsoon'%}">MULTIMEDIA</a>
+      <a href="{% url 'comingsoon'%}">AI</a>
+      <a href="{% url 'comingsoon'%}">PYTHON</a>
+    </div>
+  </div> 
+  <a href="{% url 'certeficate'%}">CERTIFICATE </a>
+  <a href="{% url 'skills'%}">SKILLS </a>
+  <a href="{%url 'about'%}">ABOUT</a>
+  <a href="{%url 'chatgpt'%}">AI CHAT</a>
+  <a href="{% url 'contact'%}" class="ri">CONTACT</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div class="cont">
+  <h1>Company <br> <span>Application</span></h1>
+  <p class="para"><p>Wellcome to HABTAMU portfolio, I am software devloper.<br> <br>
+    Interested on my skill you can order and will get best software for your organization.   </p>
+
+   
+     
+
+  <button class="learn"><a href="{% url 'contact'%}">Applay Now</a></button>
+</div><br><br><br>
+<marquee behavior="" direction="" style="color: aqua;">THANK YOU FOR VISITING ME!</marquee>
+<script>
+function myFunction() {
+  var x = document.getElementById("mynavbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+</script>
+
+</body>
+
+
+</html>

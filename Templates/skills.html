@@ -1,0 +1,127 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>skills</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static '/css/style.css'%}">
+<link rel="stylesheet" href="{% static '/css/skill.css'%}">
+<style>
+body{
+  animation:change 35s infinite ease-in-out;
+}
+
+@keyframes change{
+  0%{
+    background-image:url('{%static '/img/img1.jpg'%}')
+     }
+  20%{
+ background-image:url('{%static '/img/img2.jpg'%}')
+  }
+  
+  40%{
+    background-image:url('{%static '/img/img3.jpg'%}')
+      }
+    60%{
+        background-image:url('{%static '/img/img4.jpg'%}')
+          }
+    80%{
+        background-image:url('{%static '/img/img6.jpg'%}')
+        }
+              
+   100%{
+    background-image:url('{%static '/img/intern.jpg'%}')
+      }
+}
+</style>
+</head>
+<body>
+  <div class="logo">
+    <h1>HABTAMU SKILLS</h1><br>
+  </div>
+<div class="navbar" id="mynavbar">
+
+  <a href="{%url 'index'%}">HOME</a>
+    </div>
+
+  <h2>TECHNICAL SKILLS </h2>
+      
+    <div class="skills">
+        <div class="skill">
+            <div class="skill-name">HTML</div>
+              <div class="skill-bar">
+                <div class="skill-per" per="90%" style="max-width:90%"></div>
+              </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">CSS,C++</div>
+              <div class="skill-bar">
+                <div class="skill-per" per="80%" style="max-width:80%"></div>
+              </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-name">PHP , JAVA,C#</div>
+              <div class="skill-bar">
+                <div class="skill-per" per="75%" style="max-width:75%"></div>
+              </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name"> PYTHON, DJANGO </div>
+              <div class="skill-bar">
+                <div class="skill-per" per="60%" style="max-width:60%"></div>
+              </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+<div class="pskills">
+    <h2>PROFESSIONAL SKILLS </h2>
+    <div class="skill">
+        <div class="skill-name">Communication </div>
+           <div class="skill-bar">
+            <div class="skill-per" per="90%" style="max-width:90%"></div>
+          </div>
+     </div>
+     <div class="skill">
+        <div class="skill-name">Team Work</div>
+           <div class="skill-bar">
+            <div class="skill-per" per="80%" style="max-width:80%"></div>
+          </div>
+     </div>
+
+     <div class="skill">
+        <div class="skill-name">Project Management</div>
+           <div class="skill-bar">
+            <div class="skill-per" per="75%" style="max-width:75%"></div>
+          </div>
+     </div>
+     <div class="skill">
+        <div class="skill-name"> Proplem Solving </div>
+           <div class="skill-bar">
+            <div class="skill-per" per="60%" style="max-width:60%"></div>
+          </div>
+     </div>
+
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("mynavbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,95 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>about HABTAMU</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static '/css/style.css'%}">
+<style>
+body{
+  animation:change 35s infinite ease-in-out;
+}
+
+@keyframes change{
+  0%{
+    background-image:url('{%static '/img/img1.jpg'%}')
+     }
+  20%{
+ background-image:url('{%static '/img/img2.jpg'%}')
+  }
+  
+  40%{
+    background-image:url('{%static '/img/img3.jpg'%}')
+      }
+    60%{
+        background-image:url('{%static '/img/img4.jpg'%}')
+          }
+    80%{
+        background-image:url('{%static '/img/img6.jpg'%}')
+        }
+              
+   100%{
+    background-image:url('{%static '/img/intern.jpg'%}')
+      }
+}
+</style>
+</head>
+<body>
+  <div class="logo">
+    <h1>HABTAMU YIBELIE</h1><br>
+    <h3>NOW I AM INFORMATION Technology STUDENT&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IN WACHEMO UNIVERSITY</h3>
+  </div>
+<div class="navbar" id="mynavbar">
+
+  <a href="{%url 'index'%}">HOME</a>
+  <div class="dropdown">
+    <button class="dropbtn">TUTORIAL 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-list">
+      <a href="{% url 'comingsoon'%}">S.W Dev.t</a>
+      <a href="{% url 'comingsoon'%}">NETWORKING</a>
+      <a href="{% url 'comingsoon'%}">DATABASE</a>
+      <a href="{% url 'comingsoon'%}">MULTIMEDIA</a>
+      <a href="{% url 'comingsoon'%}">AI</a>
+      <a href="{% url 'comingsoon'%}">PYTHON</a>
+    </div>
+  </div> 
+  <a href="{% url 'certeficate'%}">CERTIFICATE </a>
+  <a href="{% url 'skills'%}">SKILLS </a>
+  <a href="{% url 'contact'%}" class="ri">CONTACT</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div class="cont">
+  <h1 style="color: #ff7200;">ETHIOPIA <br> <span>Wachemo University,&nbsp;&nbsp;&nbsp;&nbsp; Hosanna</span></h1>
+  <h4 style="color: #ff7200;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Email: yibeliehabtamu@gmail.com</h4>
+  <h4 style="color: #ff7200;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone: +2517600036</h4>
+ 
+  <p class="para"><p>After gratuation I want to be a software devloper. <br> <br>
+  I am very interseted on Artificial intelegence and Python programming. <br><br>
+This website is devloped by using python program django library. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HABTAMU
+ </p>
+
+   
+  <button class="learn"><a href="{% url 'contact'%}">Applay Now</a></button>
+</div>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20516.57751568826!2d37.83876729413614!3d7.562876089757567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17b249c253edf5b3%3A0xde7c0ec676eb456!2sHosanna!5e0!3m2!1sam!2set!4v1701424805447!5m2!1sam!2set"
+ width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("mynavbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+</script>
+
+</body>
+
+
+</html>

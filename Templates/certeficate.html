@@ -1,0 +1,86 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>about HABTAMU</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static '/css/style.css'%}">
+<style>
+body{
+  animation:change 35s infinite ease-in-out;
+}
+
+@keyframes change{
+  0%{
+    background-image:url('{%static '/img/img1.jpg'%}')
+     }
+  20%{
+ background-image:url('{%static '/img/img2.jpg'%}')
+  }
+  
+  40%{
+    background-image:url('{%static '/img/img3.jpg'%}')
+      }
+    60%{
+        background-image:url('{%static '/img/img4.jpg'%}')
+          }
+    80%{
+        background-image:url('{%static '/img/img6.jpg'%}')
+        }
+              
+   100%{
+    background-image:url('{%static '/img/intern.jpg'%}')
+      }
+}
+</style>
+</head>
+<body>
+  <div class="logo">
+    <h1>HABTAMU YIBELIE</h1><br>
+    <h3>NOW I AM INFORMATION Technology STUDENT&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IN WACHEMO UNIVERSITY</h3>
+  </div>
+<div class="navbar" id="mynavbar">
+
+  <a href="{%url 'index'%}">HOME</a>
+  
+ 
+  <a href="{% url 'contact'%}" class="ri">CONTACT</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div class="cont">
+  <h1>MY <br> <span>CERTEFICATES</span></h1>
+  <p class="para"><p> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="{%static '/img/crtf1.jpg'%}" alt=""> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{%static '/img/crtf2.jpg'%}" alt="">
+   <br><br><br> <img src="{%static '/img/crtf3.jpg'%}"
+    alt=""> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{%static '/img/crtf4.jpg'%}" alt=""><br> <br><br>
+    it is important to skill up my knowladge <br><br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HABTAMU
+ </p>
+
+  <button class="learn"><a href="{% url 'contact'%}">Applay Now</a></button>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("mynavbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+</script>
+
+</body>
+
+
+</html>
